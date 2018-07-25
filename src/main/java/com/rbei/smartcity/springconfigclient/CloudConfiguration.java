@@ -4,14 +4,22 @@ public class CloudConfiguration {
 
 	String minimum;
 	String maximum;
+	String hostname;
 	
-	
+	public String getHostname() {
+		return hostname;
+	}
+	public void setHostname(String hostname) {
+		this.hostname = hostname;
+	}
 	protected CloudConfiguration() {
 	}
-	protected CloudConfiguration(String minimum, String maximum) {
+	
+	protected CloudConfiguration(String minimum, String maximum, String hostname) {
 		super();
 		this.minimum = minimum;
 		this.maximum = maximum;
+		this.hostname = hostname;
 	}
 	public String getMinimum() {
 		return minimum;

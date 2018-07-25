@@ -10,24 +10,35 @@ public class Configuration {
 	
 	private String maximum;
 	private String minimum;
+	private String hostname;
 	
+	public String getHostname() {
+		return hostname;
+	}
+
+	public void setHostname(String hostname) {
+		this.hostname = hostname;
+	}
+
 	protected Configuration() {
 		
 	}
-	
-	public Configuration(String maximum, String minimum) {
+	protected Configuration(String maximum, String minimum, String hostname) {
 		super();
 		this.maximum = maximum;
 		this.minimum = minimum;
+		this.hostname = hostname;
 	}
+
 	
-	
+
 	public String getMaximum() {
 		return maximum;
 	}
 	public void setMaximum(String maximum) {
 		this.maximum = maximum;
 	}
+	
 	public String getMinimum() {
 		return minimum;
 	}
